@@ -29,13 +29,11 @@
 <a id="requirements-and-target-audiences" class="anchor" href="#requirements-and-target-audiences" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><strong>Requirements and Target Audiences</strong>
 </h1>
 
-<pre><code>This app targets people who play tabletop RPGs. In particular, this app will be most useful for players of Dungeons and Dragons (D&amp;D) version 3.5.
-</code></pre>
+<p>This app targets people who play tabletop RPGs. In particular, this app will be most useful for players of Dungeons and Dragons (D&amp;D) version 3.5.</p>
 
 <p>Currently, many tabletop RPGs require keeping track of a large number of statistics per character, that in turn usually involve some sort of mathematics to calculate whether the statistics benefit or detriment other specific skills that characters can use. In addition, games typically include special skills or spells with various aspects that players must keep track of, like the name of the skill/spell, their effects, how many times it can be used and how many times it already has been used, etc.</p>
 
-<pre><code>One common way that players keep track of this is by using paper copies and filling them out with character information. However, this is cumbersome as this typically involves multiple pages, as well as edits and recalculations each time a spell is used or damage is taken or given; points must be erased and rewritten constantly. This becomes problematic if a player miscalculates at any point, forgets the many modifications that their stats give them, or doesn’t keep track of the number of rounds that have passed (most spells typically last a specific number of rounds) as that can drastically affect whether events succeed or not.
-</code></pre>
+<p>One common way that players keep track of this is by using paper copies and filling them out with character information. However, this is cumbersome as this typically involves multiple pages, as well as edits and recalculations each time a spell is used or damage is taken or given; points must be erased and rewritten constantly. This becomes problematic if a player miscalculates at any point, forgets the many modifications that their stats give them, or doesn’t keep track of the number of rounds that have passed (most spells typically last a specific number of rounds) as that can drastically affect whether events succeed or not.</p>
 
 <p>Implementing the application on a phone rather than a computer also provides a more portable and convenient way to keep track of character data that is less disorganized and calculation-heavy than physical paper copies, as well as less clunky than having to lug one’s entire computer around to each session. We also expect that it will be able to display multiple relevant pages for one character and be more intuitive to navigate based on touchscreens.</p>
 
@@ -43,35 +41,54 @@
 
 <p><strong># Functionality</strong></p>
 
-<pre><code>Player A is a mage, and wants to use a spell, but this spell can only be used once every 3 rounds, and A isn’t sure if they used it 2 or 3 rounds ago. The app tells them that they have used it 3 rounds ago, and therefore can use the spell. A happily uses the spell, and destroys all the monsters, saving the party from certain death.
+<p>Player A is a mage, and wants to use a spell, but this spell can only be used once every 3 rounds, and A isn’t sure if they used it 2 or 3 rounds ago. The app tells them that they have used it 3 rounds ago, and therefore can use the spell. A happily uses the spell, and destroys all the monsters, saving the party from certain death.</p>
 
-Player B was playing as a male human knight last week, but after sitting down with everyone he changes his mind--he wants to play as his other persona, an elf rogue today. B then pulls up the app and selects his other character sheet. Problem solved, no need to go home and grab the other character sheet.
+<p>Player B was playing as a male human knight last week, but after sitting down with everyone he changes his mind--he wants to play as his other persona, an elf rogue today. B then pulls up the app and selects his other character sheet. Problem solved, no need to go home and grab the other character sheet.</p>
 
-Player C is about to attack a monster. However, they are equipped with two swords, an amulet, an active buff, and two passive buffs. Oh, and it’s raining. Fear not! The app does all the calculations and rolls the dice for C. The attack has failed, but C is relieved that they did not have to waste their time calculating for this unsuccessful attempt.
+<p>Player C is about to attack a monster. However, they are equipped with two swords, an amulet, an active buff, and two passive buffs. Oh, and it’s raining. Fear not! The app does all the calculations and rolls the dice for C. The attack has failed, but C is relieved that they did not have to waste their time calculating for this unsuccessful attempt.</p>
 
-Player D, similar to C, has successfully calculated all the modifications thanks to the app. However, D is oldschool. He likes rolling his own dice. The app does the calculations for him and lets him select the option to roll the dice himself. D is happy.
-</code></pre>
+<p>Player D, similar to C, has successfully calculated all the modifications thanks to the app. However, D is oldschool. He likes rolling his own dice. The app does the calculations for him and lets him select the option to roll the dice himself. D is happy.</p>
 
 <p><strong># Design</strong></p>
 
-<p>The user interface of this app will allow the player to enter information about the character’s stats and display it when they wish to view it. Each character’s data sheet is divided into several sections, accessible through a menu:
-Main: This lists the character’s basic information. In particular:
-Name, Class, Level, and Details (Background, Experience (Current and To the Next Level), Class, Alignment, Religion, Gender, Age, Height, Weight, Skin, Eyes, Hair)
-Ability Scores
-Initiative, Magic Resistance, and Grapple Bonus
-HP, Speed (including bonuses/penalties), Armor Class (Base, Touch, and Flat-Footed)
-Saving Throws
-Race/Class Features
-Attacks: Lists the base attack bonus and the weapons the character has, as well as their modifiers for each attack. Weapons must be listed in the inventory to be added
-Also displays offensive skill names and descriptions, and the modifiers that apply to each.
-(Being able to view the source of each modifier would also be very convenient.)
-Skills: Lists each skill and their current modifiers. When assigning more points into skills, places skills that the class can learn first in the list.
-Feats: Lists the name and description of feats that the character currently knows.
-Spells: Lists the prepared spells, available spell slots, and the spells you know in each level, as well as the Spell Save DC and Arcane Spell Failure %. Also lists the spell’s components, duration, effect, etc.
-Gear: A list of the defensive equipment a character currently has equipped, with slots for armor, shield, gloves, boots, capes, and accessories. The item must be included in the inventory first.
-Inventory: A list of the items a character is holding that the player can add to. Includes item name, description, and weight. Will notify the player that their character is encumbered if the combined weight is too large.
-Familiars: List familiars stats (i.e. horses, animal companions, etc.), skills, and description
-Misc: A page for notes</p>
+<p>The user interface of this app will allow the player to enter information about the character’s stats and display it when they wish to view it. Each character’s data sheet is divided into several sections, accessible through a menu:</p>
+
+<h2>
+<a id="main-this-lists-the-characters-basic-information-in-particular" class="anchor" href="#main-this-lists-the-characters-basic-information-in-particular" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Main: This lists the character’s basic information. In particular:</h2>
+
+<p>-Name, Class, Level, and Details (Background, Experience (Current and To the Next Level), Class, Alignment, Religion, Gender, Age, -Height, Weight, Skin, Eyes, Hair)
+-Ability Scores
+-Initiative, Magic Resistance, and Grapple Bonus
+-HP, Speed (including bonuses/penalties), Armor Class (Base, Touch, and Flat-Footed)
+-Saving Throws
+-Race/Class Features</p>
+
+<h2>
+<a id="attacks-lists-the-base-attack-bonus-and-the-weapons-the-character-has-as-well-as-their-modifiers-for-each-attack-weapons-must-be-listed-in-the-inventory-to-be-added" class="anchor" href="#attacks-lists-the-base-attack-bonus-and-the-weapons-the-character-has-as-well-as-their-modifiers-for-each-attack-weapons-must-be-listed-in-the-inventory-to-be-added" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Attacks: Lists the base attack bonus and the weapons the character has, as well as their modifiers for each attack. Weapons must be listed in the inventory to be added</h2>
+
+<p>-Also displays offensive skill names and descriptions, and the modifiers that apply to each.
+-(Being able to view the source of each modifier would also be very convenient.)</p>
+
+<h2>
+<a id="skills-lists-each-skill-and-their-current-modifiers-when-assigning-more-points-into-skills-places-skills-that-the-class-can-learn-first-in-the-list" class="anchor" href="#skills-lists-each-skill-and-their-current-modifiers-when-assigning-more-points-into-skills-places-skills-that-the-class-can-learn-first-in-the-list" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Skills: Lists each skill and their current modifiers. When assigning more points into skills, places skills that the class can learn first in the list.</h2>
+
+<h2>
+<a id="feats-lists-the-name-and-description-of-feats-that-the-character-currently-knows" class="anchor" href="#feats-lists-the-name-and-description-of-feats-that-the-character-currently-knows" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Feats: Lists the name and description of feats that the character currently knows.</h2>
+
+<h2>
+<a id="spells-lists-the-prepared-spells-available-spell-slots-and-the-spells-you-know-in-each-level-as-well-as-the-spell-save-dc-and-arcane-spell-failure--also-lists-the-spells-components-duration-effect-etc" class="anchor" href="#spells-lists-the-prepared-spells-available-spell-slots-and-the-spells-you-know-in-each-level-as-well-as-the-spell-save-dc-and-arcane-spell-failure--also-lists-the-spells-components-duration-effect-etc" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Spells: Lists the prepared spells, available spell slots, and the spells you know in each level, as well as the Spell Save DC and Arcane Spell Failure %. Also lists the spell’s components, duration, effect, etc.</h2>
+
+<h2>
+<a id="gear-a-list-of-the-defensive-equipment-a-character-currently-has-equipped-with-slots-for-armor-shield-gloves-boots-capes-and-accessories-the-item-must-be-included-in-the-inventory-first" class="anchor" href="#gear-a-list-of-the-defensive-equipment-a-character-currently-has-equipped-with-slots-for-armor-shield-gloves-boots-capes-and-accessories-the-item-must-be-included-in-the-inventory-first" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Gear: A list of the defensive equipment a character currently has equipped, with slots for armor, shield, gloves, boots, capes, and accessories. The item must be included in the inventory first.</h2>
+
+<h2>
+<a id="inventory-a-list-of-the-items-a-character-is-holding-that-the-player-can-add-to-includes-item-name-description-and-weight-will-notify-the-player-that-their-character-is-encumbered-if-the-combined-weight-is-too-large" class="anchor" href="#inventory-a-list-of-the-items-a-character-is-holding-that-the-player-can-add-to-includes-item-name-description-and-weight-will-notify-the-player-that-their-character-is-encumbered-if-the-combined-weight-is-too-large" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Inventory: A list of the items a character is holding that the player can add to. Includes item name, description, and weight. Will notify the player that their character is encumbered if the combined weight is too large.</h2>
+
+<h2>
+<a id="familiars-list-familiars-stats-ie-horses-animal-companions-etc-skills-and-description" class="anchor" href="#familiars-list-familiars-stats-ie-horses-animal-companions-etc-skills-and-description" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Familiars: List familiars stats (i.e. horses, animal companions, etc.), skills, and description</h2>
+
+<h2>
+<a id="misc-a-page-for-notes" class="anchor" href="#misc-a-page-for-notes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Misc: A page for notes</h2>
 
 <p>The process of the application manages what is on-screen at the moment. It records which calculates the total modifiers for the various stats, attacks, and abilities, as well as displays the information of classes, abilities, and skills that are located within the app’s database. As a large variety of things, from class to the type of enemy you are facing, can influence these modifiers, the process will have to be very thorough in what factors play into each stat. It also allows the user to add, modify, and delete information within a character’s datasheet, as well as delete and add new character sheets as needed. You can also use the app to 
 The data management contains information about the items, spells, races, classes, and abilities in Dungeons and Dragons that have been made available to the public for open use. Currently, we are planning to take this information from the Pathfinder Reference Document or SDR20, which are both online compendiums of this type of information. Additionally, the data entered in the character sheet will at least be saved in local storage; if we have time, we may also implement a login system that allows users to access their character data across multiple devices.
