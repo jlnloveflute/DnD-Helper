@@ -19,11 +19,19 @@
     </section>
 
     <section class="main-content">
-      <p>Overview 
-    Our project is an application for iOS that is meant to be a tabletop RPG helper. This application will keep track of each character’s stats, as well as the multitude of modifications that keep changing over the course of the game. It will also automatically calculate and randomize the dice roll for the player, eliminating the need to do so manually each time an action is taken. </p>
+      <h1>
+<a id="overview" class="anchor" href="#overview" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><strong>Overview</strong>
+</h1>
 
-<p>Requirements and Target Audiences
-    This app targets people who play tabletop RPGs. In particular, this app will be most useful for players of Dungeons and Dragons (D&amp;D) version 3.5.</p>
+<pre><code>Our project is an application for iOS that is meant to be a tabletop RPG helper. This application will keep track of each character’s stats, as well as the multitude of modifications that keep changing over the course of the game. It will also automatically calculate and randomize the dice roll for the player, eliminating the need to do so manually each time an action is taken. 
+</code></pre>
+
+<h1>
+<a id="requirements-and-target-audiences" class="anchor" href="#requirements-and-target-audiences" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><strong>Requirements and Target Audiences</strong>
+</h1>
+
+<pre><code>This app targets people who play tabletop RPGs. In particular, this app will be most useful for players of Dungeons and Dragons (D&amp;D) version 3.5.
+</code></pre>
 
 <p>Currently, many tabletop RPGs require keeping track of a large number of statistics per character, that in turn usually involve some sort of mathematics to calculate whether the statistics benefit or detriment other specific skills that characters can use. In addition, games typically include special skills or spells with various aspects that players must keep track of, like the name of the skill/spell, their effects, how many times it can be used and how many times it already has been used, etc.</p>
 
@@ -34,7 +42,7 @@
 
 <p>While our system will provide data for D&amp;D version 3.5, if we have time we hope to implement a system where users can put their own data into a generic framework and utilize this app for other games as well.</p>
 
-<p>Functionality
+<p><strong># Functionality</strong>
     Player A is a mage, and wants to use a spell, but this spell can only be used once every 3 rounds, and A isn’t sure if they used it 2 or 3 rounds ago. The app tells them that they have used it 3 rounds ago, and therefore can use the spell. A happily uses the spell, and destroys all the monsters, saving the party from certain death.</p>
 
 <pre><code>Player B was playing as a male human knight last week, but after sitting down with everyone he changes his mind--he wants to play as his other persona, an elf rogue today. B then pulls up the app and selects his other character sheet. Problem solved, no need to go home and grab the other character sheet.
@@ -44,7 +52,7 @@ Player C is about to attack a monster. However, they are equipped with two sword
 Player D, similar to C, has successfully calculated all the modifications thanks to the app. However, D is oldschool. He likes rolling his own dice. The app does the calculations for him and lets him select the option to roll the dice himself. D is happy.
 </code></pre>
 
-<p>Design
+<p><strong># Design</strong>
 The user interface of this app will allow the player to enter information about the character’s stats and display it when they wish to view it. Each character’s data sheet is divided into several sections, accessible through a menu:
 Main: This lists the character’s basic information. In particular:
 Name, Class, Level, and Details (Background, Experience (Current and To the Next Level), Class, Alignment, Religion, Gender, Age, Height, Weight, Skin, Eyes, Hair)
@@ -68,7 +76,7 @@ Misc: A page for notes</p>
 The data management contains information about the items, spells, races, classes, and abilities in Dungeons and Dragons that have been made available to the public for open use. Currently, we are planning to take this information from the Pathfinder Reference Document or SDR20, which are both online compendiums of this type of information. Additionally, the data entered in the character sheet will at least be saved in local storage; if we have time, we may also implement a login system that allows users to access their character data across multiple devices.
 As this is going to be an iOS app, we will be coding the user interface and process in Swift. The data management storage will be handled in MongoDB, but we will likely be using a Python script to scrape the data from the online resources first.</p>
 
-<p>Timeline
+<p><strong># Timeline</strong>
 Like we say in the next section, none of the members have had any experience in creating an application, so we’re not really sure what kind of timeline we should have or expect. Hopefully, by the end of spring break, we will have looked into data storage and the languages that iOS applications are coded in.
 3/18/16 - Have project status website set up
 3/21/16 - Finalize project status website and elevator speech
@@ -78,7 +86,7 @@ Like we say in the next section, none of the members have had any experience in 
 4/18/16 - Core functionality of app is working somewhat - need not be perfect yet (Alpha due this week)
 4/25/16 - App works well enough to be tested by real users (Beta due this week)</p>
 
-<p>Risks and Outcomes
+<p><strong># Risks and Outcomes</strong>
 Nobody in our group has ever made an application for iOS. The only one who has any tangentially relevant experience in creating applications or suchlike at all is Rita, who created a Chrome extension in Javascript, CSS, and HTML at the last HackPrinceton. In addition, Rita and Cassius have played Dungeons and Dragons before (Rita has played D&amp;D version 3.5 extensively), but Rei doesn’t know it well enough to know exactly what is and isn’t inconvenient for typical D&amp;D players. Alice has never played D&amp;D and has no experience in it whatsoever.
 We all need to learn Swift in order to program the application itself, as well as how to store and retrieve data from MongoDB.
 The hardest part of this assignment will be designing an interface that is most useful for players, as there is only so much information we can show on an iPhone screen at once. Having our beta up as soon as possible and getting a lot of people to test it out is key.</p>
