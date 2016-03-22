@@ -39,7 +39,9 @@
 
 <p>While our system will provide data for D&amp;D version 3.5, if we have time we hope to implement a system where users can put their own data into a generic framework and utilize this app for other games as well.</p>
 
-<p><strong># Functionality</strong></p>
+<h1>
+<a id="functionality" class="anchor" href="#functionality" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><strong>Functionality</strong>
+</h1>
 
 <p>Player A is a mage, and wants to use a spell, but this spell can only be used once every 3 rounds, and A isn’t sure if they used it 2 or 3 rounds ago. The app tells them that they have used it 3 rounds ago, and therefore can use the spell. A happily uses the spell, and destroys all the monsters, saving the party from certain death.</p>
 
@@ -49,14 +51,17 @@
 
 <p>Player D, similar to C, has successfully calculated all the modifications thanks to the app. However, D is oldschool. He likes rolling his own dice. The app does the calculations for him and lets him select the option to roll the dice himself. D is happy.</p>
 
-<p><strong># Design</strong></p>
+<h1>
+<a id="design" class="anchor" href="#design" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><strong>Design</strong>
+</h1>
 
 <p>The user interface of this app will allow the player to enter information about the character’s stats and display it when they wish to view it. Each character’s data sheet is divided into several sections, accessible through a menu:</p>
 
 <h2>
-<a id="main-this-lists-the-characters-basic-information-in-particular" class="anchor" href="#main-this-lists-the-characters-basic-information-in-particular" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Main: This lists the character’s basic information. In particular:</h2>
+<a id="main" class="anchor" href="#main" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Main:</h2>
 
-<p>-Name, Class, Level, and Details (Background, Experience (Current and To the Next Level), Class, Alignment, Religion, Gender, Age, -Height, Weight, Skin, Eyes, Hair)
+<p>This lists the character’s basic information. In particular:
+-Name, Class, Level, and Details (Background, Experience (Current and To the Next Level), Class, Alignment, Religion, Gender, Age, -Height, Weight, Skin, Eyes, Hair)
 -Ability Scores
 -Initiative, Magic Resistance, and Grapple Bonus
 -HP, Speed (including bonuses/penalties), Armor Class (Base, Touch, and Flat-Footed)
@@ -64,37 +69,54 @@
 -Race/Class Features</p>
 
 <h2>
-<a id="attacks-lists-the-base-attack-bonus-and-the-weapons-the-character-has-as-well-as-their-modifiers-for-each-attack-weapons-must-be-listed-in-the-inventory-to-be-added" class="anchor" href="#attacks-lists-the-base-attack-bonus-and-the-weapons-the-character-has-as-well-as-their-modifiers-for-each-attack-weapons-must-be-listed-in-the-inventory-to-be-added" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Attacks: Lists the base attack bonus and the weapons the character has, as well as their modifiers for each attack. Weapons must be listed in the inventory to be added</h2>
+<a id="attacks" class="anchor" href="#attacks" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Attacks:</h2>
 
-<p>-Also displays offensive skill names and descriptions, and the modifiers that apply to each.
+<p>Lists the base attack bonus and the weapons the character has, as well as their modifiers for each attack. Weapons must be listed in the inventory to be added
+-Also displays offensive skill names and descriptions, and the modifiers that apply to each.
 -(Being able to view the source of each modifier would also be very convenient.)</p>
 
 <h2>
-<a id="skills-lists-each-skill-and-their-current-modifiers-when-assigning-more-points-into-skills-places-skills-that-the-class-can-learn-first-in-the-list" class="anchor" href="#skills-lists-each-skill-and-their-current-modifiers-when-assigning-more-points-into-skills-places-skills-that-the-class-can-learn-first-in-the-list" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Skills: Lists each skill and their current modifiers. When assigning more points into skills, places skills that the class can learn first in the list.</h2>
+<a id="skills" class="anchor" href="#skills" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Skills:</h2>
+
+<p>Lists each skill and their current modifiers. When assigning more points into skills, places skills that the class can learn first in the list.</p>
 
 <h2>
-<a id="feats-lists-the-name-and-description-of-feats-that-the-character-currently-knows" class="anchor" href="#feats-lists-the-name-and-description-of-feats-that-the-character-currently-knows" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Feats: Lists the name and description of feats that the character currently knows.</h2>
+<a id="feats" class="anchor" href="#feats" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Feats:</h2>
+
+<p>Lists the name and description of feats that the character currently knows.</p>
 
 <h2>
-<a id="spells-lists-the-prepared-spells-available-spell-slots-and-the-spells-you-know-in-each-level-as-well-as-the-spell-save-dc-and-arcane-spell-failure--also-lists-the-spells-components-duration-effect-etc" class="anchor" href="#spells-lists-the-prepared-spells-available-spell-slots-and-the-spells-you-know-in-each-level-as-well-as-the-spell-save-dc-and-arcane-spell-failure--also-lists-the-spells-components-duration-effect-etc" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Spells: Lists the prepared spells, available spell slots, and the spells you know in each level, as well as the Spell Save DC and Arcane Spell Failure %. Also lists the spell’s components, duration, effect, etc.</h2>
+<a id="spells" class="anchor" href="#spells" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Spells:</h2>
+
+<p>Lists the prepared spells, available spell slots, and the spells you know in each level, as well as the Spell Save DC and Arcane Spell Failure %. Also lists the spell’s components, duration, effect, etc.</p>
 
 <h2>
-<a id="gear-a-list-of-the-defensive-equipment-a-character-currently-has-equipped-with-slots-for-armor-shield-gloves-boots-capes-and-accessories-the-item-must-be-included-in-the-inventory-first" class="anchor" href="#gear-a-list-of-the-defensive-equipment-a-character-currently-has-equipped-with-slots-for-armor-shield-gloves-boots-capes-and-accessories-the-item-must-be-included-in-the-inventory-first" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Gear: A list of the defensive equipment a character currently has equipped, with slots for armor, shield, gloves, boots, capes, and accessories. The item must be included in the inventory first.</h2>
+<a id="gear" class="anchor" href="#gear" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Gear:</h2>
+
+<p>A list of the defensive equipment a character currently has equipped, with slots for armor, shield, gloves, boots, capes, and accessories. The item must be included in the inventory first.</p>
 
 <h2>
-<a id="inventory-a-list-of-the-items-a-character-is-holding-that-the-player-can-add-to-includes-item-name-description-and-weight-will-notify-the-player-that-their-character-is-encumbered-if-the-combined-weight-is-too-large" class="anchor" href="#inventory-a-list-of-the-items-a-character-is-holding-that-the-player-can-add-to-includes-item-name-description-and-weight-will-notify-the-player-that-their-character-is-encumbered-if-the-combined-weight-is-too-large" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Inventory: A list of the items a character is holding that the player can add to. Includes item name, description, and weight. Will notify the player that their character is encumbered if the combined weight is too large.</h2>
+<a id="inventory" class="anchor" href="#inventory" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Inventory:</h2>
+
+<p>A list of the items a character is holding that the player can add to. Includes item name, description, and weight. Will notify the player that their character is encumbered if the combined weight is too large.</p>
 
 <h2>
-<a id="familiars-list-familiars-stats-ie-horses-animal-companions-etc-skills-and-description" class="anchor" href="#familiars-list-familiars-stats-ie-horses-animal-companions-etc-skills-and-description" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Familiars: List familiars stats (i.e. horses, animal companions, etc.), skills, and description</h2>
+<a id="familiars" class="anchor" href="#familiars" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Familiars:</h2>
+
+<p>List familiars stats (i.e. horses, animal companions, etc.), skills, and description</p>
 
 <h2>
-<a id="misc-a-page-for-notes" class="anchor" href="#misc-a-page-for-notes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Misc: A page for notes</h2>
+<a id="misc" class="anchor" href="#misc" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Misc:</h2>
+
+<p>A page for notes</p>
 
 <p>The process of the application manages what is on-screen at the moment. It records which calculates the total modifiers for the various stats, attacks, and abilities, as well as displays the information of classes, abilities, and skills that are located within the app’s database. As a large variety of things, from class to the type of enemy you are facing, can influence these modifiers, the process will have to be very thorough in what factors play into each stat. It also allows the user to add, modify, and delete information within a character’s datasheet, as well as delete and add new character sheets as needed. You can also use the app to 
 The data management contains information about the items, spells, races, classes, and abilities in Dungeons and Dragons that have been made available to the public for open use. Currently, we are planning to take this information from the Pathfinder Reference Document or SDR20, which are both online compendiums of this type of information. Additionally, the data entered in the character sheet will at least be saved in local storage; if we have time, we may also implement a login system that allows users to access their character data across multiple devices.
 As this is going to be an iOS app, we will be coding the user interface and process in Swift. The data management storage will be handled in MongoDB, but we will likely be using a Python script to scrape the data from the online resources first.</p>
 
-<p><strong># Timeline</strong></p>
+<h1>
+<a id="timeline" class="anchor" href="#timeline" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><strong>Timeline</strong>
+</h1>
 
 <p>Like we say in the next section, none of the members have had any experience in creating an application, so we’re not really sure what kind of timeline we should have or expect. Hopefully, by the end of spring break, we will have looked into data storage and the languages that iOS applications are coded in.
 3/18/16 - Have project status website set up
@@ -105,7 +127,9 @@ As this is going to be an iOS app, we will be coding the user interface and proc
 4/18/16 - Core functionality of app is working somewhat - need not be perfect yet (Alpha due this week)
 4/25/16 - App works well enough to be tested by real users (Beta due this week)</p>
 
-<p><strong># Risks and Outcomes</strong></p>
+<h1>
+<a id="risks-and-outcomes" class="anchor" href="#risks-and-outcomes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><strong>Risks and Outcomes</strong>
+</h1>
 
 <p>Nobody in our group has ever made an application for iOS. The only one who has any tangentially relevant experience in creating applications or suchlike at all is Rita, who created a Chrome extension in Javascript, CSS, and HTML at the last HackPrinceton. In addition, Rita and Cassius have played Dungeons and Dragons before (Rita has played D&amp;D version 3.5 extensively), but Rei doesn’t know it well enough to know exactly what is and isn’t inconvenient for typical D&amp;D players. Alice has never played D&amp;D and has no experience in it whatsoever.
 We all need to learn Swift in order to program the application itself, as well as how to store and retrieve data from MongoDB.
