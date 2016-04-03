@@ -15,7 +15,7 @@ app.use(express.bodyParser());
 var collectionDriver;
 
 // Connection URL 
-var url = 'mongodb://azxie:jumprope4@ds015710.mlab.com:15710/dndusers';
+var url = 'mongodb://localhost:27017/items';
 // Use connect method to connect to the Server 
 MongoClient.connect(url, function(err, db) {
   assert.equal(null, err);
