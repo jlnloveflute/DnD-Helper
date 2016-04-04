@@ -21,7 +21,7 @@ class FirstViewController: UIViewController {
     @IBOutlet var intLabel: UILabel!
     @IBOutlet var wisLabel: UILabel!
     @IBOutlet var chaLabel: UILabel!
-  
+
     func grabSheet() {
         let urlRequest: String = "items"
         let fullurlPath: String = urlPath + urlRequest
