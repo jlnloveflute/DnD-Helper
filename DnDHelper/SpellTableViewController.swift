@@ -72,7 +72,7 @@ class SpellTableViewController: UITableViewController {
             let indexPath = tableView.indexPathForCell(selectedSpellCell)!
             let selectedSpell = spells[indexPath.row]
             spellDetailViewController.spell = selectedSpell
-            print("Checking detail")
+            //print("Checking detail")
         }
         
     }
