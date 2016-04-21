@@ -9,7 +9,6 @@
 import UIKit
 import SwiftyJSON
 import Alamofire
-import Foundation //for debugging can take out so far
 
 let urlPath: String = "http://localhost:3000/"
 
