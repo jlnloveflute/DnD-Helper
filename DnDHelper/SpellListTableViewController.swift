@@ -1,5 +1,5 @@
 //
-//  SpellTableViewController.swift
+//  SpellListTableViewController.swift
 //  DnDHelper
 //
 //  Created by Rita Fang on 4/21/16.
@@ -8,20 +8,20 @@
 
 import UIKit
 
-class SpellTableViewController: UITableViewController {
+class SpellListTableViewController: UITableViewController {
     var spells = [[Spell]]()
     var spellheadings = ["Cantrips", "1st Level Spells", "2nd Level Spells", "3rd Level Spells", "4th Level Spells", "5th Level Spells", "6th Level Spells", "7th Level Spells", "8th Level Spells", "9th Level Spells"]
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         // Load the sample data.
         loadSampleSpells()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
@@ -52,28 +52,46 @@ class SpellTableViewController: UITableViewController {
         let classes2 = ["Druid"]
         let oaths2 = [String]()
         let ritual2 = false
+    
+        let name3 = "Alarm"
+        let desc3 = "Choose a door, window, or an area within range that is no larger than a 20-foot cube. Until the spell ends, an alarm alerts you whenever a Tiny or larger creature touches or enters the warded area. You can designate creatures to not trigger the alarm. A mental alarm alerts you if you are within 1 mile and wakes you if sleeping. An audible alarm produces a bell sound for 10 seconds within 60 feet."
+        let level3 = 1
+        let range3 = "30 feet"
+        let components3 = ["V", "S", "M (a tiny bell and a piece of fine silver wire)"]
+        let duration3 = "8 hours"
+        let concentration3 = false
+        let casting_time3 = "1 action"
+        let school3 = "Transmutation"
+        let classes3 = ["Ranger"]
+        let oaths3 = [String]()
+        let ritual3 = true
         
         
         let spell1 = Spell(name: name1, desc: desc1, level: level1, range: range1, components: components1, duration: duration1, concentration: concentration1, casting_time: casting_time1, school: school1, classes: classes1, oaths: oaths1, ritual: ritual1)!
         
         let spell2 = Spell(name: name2, desc: desc2, level: level2, range: range2, components: components2, duration: duration2, concentration: concentration2, casting_time: casting_time2, school: school2, classes: classes2, oaths: oaths2, ritual: ritual2)!
+        
+        let spell3 = Spell(name: name3, desc: desc3, level: level3, range: range3, components: components3, duration: duration3, concentration: concentration3, casting_time: casting_time3, school: school3, classes: classes3, oaths: oaths3, ritual: ritual3)!
+        
+        let spells1list = [spell3]
         let spells2list = [spell1, spell2]
         spells.append([Spell]())
-        spells.append([Spell]())
+        spells.append(spells1list)
         spells.append(spells2list)
         
     }
     
-    @IBAction func cancelToSpellTableViewController(segue:UIStoryboardSegue) {
+    @IBAction func cancelToSpellListViewController(segue:UIStoryboardSegue) {
     }
     
     // This method lets you configure a view controller before it's presented.
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ShowSpellDetail" {
-            
-            let spellDetailViewController = segue.destinationViewController as! SpellDetail
+            //print("Segueing?")
+            let spellDetailViewController = segue.destinationViewController as! SpellDetailAdd
             // Get the cell that generated this segue.
-            if let selectedSpellCell = sender as? SpellTableViewCell {
+            
+            if let selectedSpellCell = sender as? SpellListViewCell {
                 let indexPath = tableView.indexPathForCell(selectedSpellCell)!
                 let selectedSpell = spells[indexPath.section][indexPath.row]
                 spellDetailViewController.spell = selectedSpell
@@ -82,107 +100,83 @@ class SpellTableViewController: UITableViewController {
         }
     }
     
-    @IBAction func saveSpell(segue:UIStoryboardSegue) {
-        if let spellDetailAdd = segue.sourceViewController as? SpellDetailAdd {
-            var alreadyAdded = false
-            
-            //add the new spell to the spells array
-            if let spell = spellDetailAdd.spell {
-                for level in spells {
-                    for spellcheck in level {
-                        if spell.name == spellcheck.name {
-                            alreadyAdded = true
-                        }
-                    }
-                }
-                if !alreadyAdded {
-                    spells[spell.level].append(spell)
-                    
-                    //update the tableView
-                    let indexPath = NSIndexPath(forRow: spells[spell.level].count - 1, inSection: spell.level)
-                    tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-                }
-                
-            }
-        }
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return spells.count
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return spells[section].count
     }
-
-
+    
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cellIdentifier = "SpellTableViewCell"
+        let cellIdentifier = "SpellListViewCell"
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! SpellTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! SpellListViewCell
         
         let spell = spells[indexPath.section][indexPath.row]
         cell.nameLabel.text = spell.name
-
+        
         return cell
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return spellheadings[section]
     }
-
-
+    
+    
     /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
+     // Override to support conditional editing of the table view.
+     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+     // Return false if you do not want the specified item to be editable.
+     return true
+     }
+     */
+    
     /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
+     // Override to support editing the table view.
+     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+     if editingStyle == .Delete {
+     // Delete the row from the data source
+     tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+     } else if editingStyle == .Insert {
+     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+     }
+     }
+     */
+    
     /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
+     // Override to support rearranging the table view.
+     override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
+     
+     }
+     */
+    
     /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
+     // Override to support conditional rearranging of the table view.
+     override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+     // Return false if you do not want the item to be re-orderable.
+     return true
+     }
+     */
+    
     /*
-    // MARK: - Navigation
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

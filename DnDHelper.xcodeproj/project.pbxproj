@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5751FA861CC9C466006AE3BB /* SpellListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5751FA851CC9C466006AE3BB /* SpellListTableViewController.swift */; };
+		5751FA881CC9C703006AE3BB /* SpellListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5751FA871CC9C703006AE3BB /* SpellListViewCell.swift */; };
+		5751FA8A1CC9CF08006AE3BB /* SpellDetailAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5751FA891CC9CF08006AE3BB /* SpellDetailAdd.swift */; };
 		57527B251CC8A2B50080D965 /* SpellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57527B241CC8A2B50080D965 /* SpellTableViewCell.swift */; };
 		57527B271CC8A57B0080D965 /* SpellTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57527B261CC8A57B0080D965 /* SpellTableViewController.swift */; };
 		578C153D1CC93D5D0048466C /* Spell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578C153C1CC93D5D0048466C /* Spell.swift */; };
@@ -39,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5751FA851CC9C466006AE3BB /* SpellListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpellListTableViewController.swift; sourceTree = "<group>"; };
+		5751FA871CC9C703006AE3BB /* SpellListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpellListViewCell.swift; sourceTree = "<group>"; };
+		5751FA891CC9CF08006AE3BB /* SpellDetailAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpellDetailAdd.swift; sourceTree = "<group>"; };
 		57527B241CC8A2B50080D965 /* SpellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpellTableViewCell.swift; sourceTree = "<group>"; };
 		57527B261CC8A57B0080D965 /* SpellTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpellTableViewController.swift; sourceTree = "<group>"; };
 		578C153C1CC93D5D0048466C /* Spell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spell.swift; sourceTree = "<group>"; };
@@ -121,7 +127,10 @@
 				57D3B50A1CB20EF300598EFA /* AppDelegate.swift */,
 				57D3B50C1CB20EF300598EFA /* FirstViewController.swift */,
 				57D3B50E1CB20EF300598EFA /* SecondViewController.swift */,
+				5751FA851CC9C466006AE3BB /* SpellListTableViewController.swift */,
 				57D3B5101CB20EF300598EFA /* Main.storyboard */,
+				5751FA891CC9CF08006AE3BB /* SpellDetailAdd.swift */,
+				5751FA871CC9C703006AE3BB /* SpellListViewCell.swift */,
 				578C153E1CC95D260048466C /* SpellDetail.swift */,
 				57527B261CC8A57B0080D965 /* SpellTableViewController.swift */,
 				578C153C1CC93D5D0048466C /* Spell.swift */,
@@ -342,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5751FA861CC9C466006AE3BB /* SpellListTableViewController.swift in Sources */,
 				578C153D1CC93D5D0048466C /* Spell.swift in Sources */,
 				578C153F1CC95D260048466C /* SpellDetail.swift in Sources */,
 				57D3B50F1CB20EF300598EFA /* SecondViewController.swift in Sources */,
@@ -349,6 +359,8 @@
 				57D3B50D1CB20EF300598EFA /* FirstViewController.swift in Sources */,
 				57527B271CC8A57B0080D965 /* SpellTableViewController.swift in Sources */,
 				57527B251CC8A2B50080D965 /* SpellTableViewCell.swift in Sources */,
+				5751FA881CC9C703006AE3BB /* SpellListViewCell.swift in Sources */,
+				5751FA8A1CC9CF08006AE3BB /* SpellDetailAdd.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

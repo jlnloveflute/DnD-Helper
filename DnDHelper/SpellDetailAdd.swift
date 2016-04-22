@@ -1,5 +1,5 @@
 //
-//  SpellDetail.swift
+//  SpellDetailAdd.swift
 //  DnDHelper
 //
 //  Created by Rita Fang on 4/21/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SpellDetail: UIViewController {
+class SpellDetailAdd: UIViewController {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var levelLabel: UILabel!
     @IBOutlet var castLabel: UILabel!
@@ -17,6 +17,7 @@ class SpellDetail: UIViewController {
     @IBOutlet var componentsLabel: UILabel!
     @IBOutlet var descriptionLabel: UITextView!
     
+    @IBOutlet weak var addButton: UIButton!
     var spell: Spell?
     
     func printSpell(spell: Spell) {
@@ -54,16 +55,27 @@ class SpellDetail: UIViewController {
         descriptionLabel.text = spell.desc
         
     }
+    
+    // This method lets you configure a view controller before it's presented.
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "addSpell" {
+        }
+
+    }
+    
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         printSpell(spell!)
-       
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
 
 }
